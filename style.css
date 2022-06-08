@@ -93,7 +93,7 @@ h1 {
 
 .hobbabs img {
     width: 50px;
-    animation: doup 6s linear infinite;
+    animation: doup 7s linear infinite;
 }
 
 .hobbabs {
@@ -104,6 +104,47 @@ h1 {
     position: absolute;
     bottom: -70px;
 }
+
+.hobbabs1 img {
+    width: 50px;
+    animation: doup1 7s linear infinite;
+}
+
+.hobbabs1 {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+.hobbabs1 img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+}
+.hobbabs1 img:nth-child(2) {
+    animation-delay: 1s;
+}
+.hobbabs1 img:nth-child(3) {
+    animation-delay: 3s;
+    width: 25px;
+}
+.hobbabs1 img:nth-child(4) {
+    animation-delay: 4.5s;
+}
+.hobbabs1 img:nth-child(5) {
+    animation-delay: 3s;
+}
+.hobbabs1 img:nth-child(6) {
+    animation-delay: 6s;
+    width: 20px;
+}
+.hobbabs1 img:nth-child(7) {
+    animation-delay: 7s;
+    width: 35px;
+}
+
 
 @keyframes doup {
     0% {
@@ -119,6 +160,26 @@ h1 {
     100% {
         transform: translateY(-80vh);
         opacity: 0;
+    }
+}
+
+@keyframes doup1 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 1;
     }
 }
 
@@ -146,4 +207,77 @@ h1 {
 .hobbabs img:nth-child(7) {
     animation-delay: 7s;
     width: 35px;
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(images/background.png);
+    background-size: cover;
+}
+
+.box {
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box h1 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.box input[type="password"],.box input[type= "text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #0367fd;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    transition: 0.5px;
+
+
+}
+
+.box input[type= "password"]:focus,.box input[type= "text"]:focus {
+    width: 270px;
+    border-color: #ffc400a6;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #16ad08;
+    padding: 14px 30px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+.box input[type= "submit"]:hover {
+    background: #16ad08a9;
 }
